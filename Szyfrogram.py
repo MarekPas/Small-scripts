@@ -21,7 +21,7 @@ def kuralyminote(text):
     text2 = str.maketrans(kod, kod2)
     print(text.translate(text2))
 
-
+#below is another way to translate
 def koniecmatury(text):
     complement = {'k': 'o', 'o': 'k', 'n': 'i', 'i': 'n', 'e': 'c', 'c': 'e', 'm': 'a', 'a': 'm', 't': 'u', 'u': 't',
                   'r': 'y', 'y': 'r', ' ': ' '}
@@ -39,25 +39,25 @@ def koniecmatury(text):
 
 not_end = True
 while not_end:
-    print("1 - Gaderypoluki  2- Padykinozetu  3 - Kuralyminote  4 - Koniecmatury  0 - zakończenie programu")
+    print("\n 1 - Gaderypoluki\n 2 - Padykinozetu\n 3 - Kuralyminote\n 4 - Koniecmatury\n 0 - Close program")
     try:
-        code = int(input("Wybierz szyfr: "))
+        code = int(input("Select encryption: "))
     except:
-        print("Błąd! Musisz wpisać liczbę z przedziału 0-4!")
+        print("Error! You must enter digit from the range of 0-4!")
     else:
         if code == 1:
-            text = str(input("Podaj text do przetłumaczenia na Gaderypoluki:\n"))
+            text = str(input("Enter text to crypt/encrypt to/from Gaderypoluki:\n"))
             gaderypoluki(text)
         elif code == 2:
-            text = str(input("Podaj text do przetłumaczenia na Padykinozetu:\n"))
+            text = str(input("Enter text to crypt/encrypt to/from Padykinozetu:\n"))
             padykinozetu(text)
         elif code == 3:
-            text = str(input("Podaj text do przetłumaczenia na Kuralyminote:\n"))
+            text = str(input("Enter text to crypt/encrypt to/from Kuralyminote:\n"))
             kuralyminote(text)
         elif code == 4:
-            text = str(input("Podaj text do przetłumaczenia na Koniecmatury:\n"))
+            text = str(input("Enter text to crypt/encrypt to/from Koniecmatury:\n"))
             koniecmatury(text)
         elif code == 0:
             not_end = False
         else:
-            print("Błąd! Wpisana liczba musi być z przedziału 0-4!")
+            print("Error! You must enter digit from the range of 0-4")
