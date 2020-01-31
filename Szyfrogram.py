@@ -43,7 +43,7 @@ while not_end:
     try:
         code = int(input("Select encryption: "))
     except:
-        print("Error! You must enter digit from the range of 0-4!")
+        print("Error! You must enter digit from the range of 0-4! ")
     else:
         if code == 1:
             text = str(input("Enter text to crypt/encrypt to/from Gaderypoluki:\n"))
@@ -60,4 +60,4 @@ while not_end:
         elif code == 0:
             not_end = False
         else:
-            print("Error! You must enter digit from the range of 0-4")
+            print("Error! You must enter digit from the range of 0-4! ")
