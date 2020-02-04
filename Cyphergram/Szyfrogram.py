@@ -41,21 +41,21 @@ not_end = True
 while not_end:
     print("\n 1 - Gaderypoluki\n 2 - Padykinozetu\n 3 - Kuralyminote\n 4 - Koniecmatury\n 0 - Close program")
     try:
-        code = int(input("Select encryption: "))
+        code = int(input("Select cypher: "))
     except:
         print("Error! You must enter digit from the range of 0-4! ")
     else:
         if code == 1:
-            text = str(input("Enter text to crypt/encrypt to/from Gaderypoluki:\n"))
+            text = str(input("Enter text to encrypt/decrypt to/from Gaderypoluki:\n"))
             gaderypoluki(text)
         elif code == 2:
-            text = str(input("Enter text to crypt/encrypt to/from Padykinozetu:\n"))
+            text = str(input("Enter text to encrypt/decrypt to/from Padykinozetu:\n"))
             padykinozetu(text)
         elif code == 3:
-            text = str(input("Enter text to crypt/encrypt to/from Kuralyminote:\n"))
+            text = str(input("Enter text to encrypt/decrypt to/from Kuralyminote:\n"))
             kuralyminote(text)
         elif code == 4:
-            text = str(input("Enter text to crypt/encrypt to/from Koniecmatury:\n"))
+            text = str(input("Enter text to encrypt/decrypt to/from Koniecmatury:\n"))
             koniecmatury(text)
         elif code == 0:
             not_end = False
