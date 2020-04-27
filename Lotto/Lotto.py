@@ -1,0 +1,47 @@
+import numpy as np
+import secrets
+
+lotto = list(np.arange(1,37))
+
+def get_result(numbers):
+    # x = random.sample(lotto, 6)               # random lib is not secure
+    x = secrets.SystemRandom().sample(lotto, 6) # secrets lib is more secure than random
+    x.sort()
+    print("Drawn numbers: ", x)
+    result = 0
+    for i in x:
+        if i in numbers:
+            result =+ 1
+    return print(f"You bet correctly {result} numbers!") 
+
+def run():
+    i=0
+    numbers = []
+    while i != 6:
+        try:
+            n1 = int(input(f'Enter {i+1} number: '))
+        except ValueError:
+            print("You may enter number only from 1 to 36!")
+            continue
+        if n1 > 36 or n1 < 1:
+            print("Number must be between 1 and 36!")
+            continue
+        else:
+            if n1 in numbers:
+                print("You have already enter this number. Try another one.")
+            else:
+                i = i+1
+                numbers.append(n1)
+    numbers.sort()
+    print("Your numbers: ", numbers)
+    get_result(numbers)
+
+if __name__ == "__main__":
+    run()
+
+## COUNTER OF TRIES
+##s=[]
+##while s != numbers:
+##    s = get_result(numbers)
+##    i = i+1
+##print("Succes after ", i, "tries")
