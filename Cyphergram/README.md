@@ -7,7 +7,8 @@ It's a program to encrypt and decrypt text to/from some simple cyphers.
 * Python 3.7
 
 ## Setup
-To run this script install Python and execute file Szyfrogram.py
+python cyphergram.py
+or just double-click
 
 ## Credits
 Created by MarekPas
